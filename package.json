@@ -1,0 +1,22 @@
+{
+  "name": "webdev-coursework-2",
+  "version": "1.0.0",
+  "description": "WebDev Coursework 2 CMP-4011A",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oriyash/webdev-coursework-2.git"
+  },
+  "author": "Group E5",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oriyash/webdev-coursework-2/issues"
+  },
+  "homepage": "https://github.com/oriyash/webdev-coursework-2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
