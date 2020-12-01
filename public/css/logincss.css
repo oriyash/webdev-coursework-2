@@ -1,8 +1,8 @@
-@import url('../css/ManropeFont.css');
+@import url('ManropeFont.css');
 
 body {
     font-family: "Manrope", sans-serif;
-    background: linear-gradient(90deg, #185a9d, #333333);
+    background: linear-gradient(90deg, #8BB6A6, #9bc1c2);
     font-size: 20px;
     color: #ffffff;
     overflow: hidden;
@@ -28,7 +28,7 @@ input[type=email], input[type=password] {
 
 input[type=email]::placeholder, input[type=password]::placeholder {
     font-size: 20px;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 input[type=submit] {
