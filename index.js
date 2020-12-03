@@ -12,6 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 
+
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
@@ -19,5 +20,16 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
     res.sendFile(path.join(__dirname + '/about.html'));
 });
+
+// POST req for login
+app.post('/home', (req, res) => {
+    res.send('Login Worked')
+})
+
+// POST req for sign up 
+app.post('/register', (req, res) => {
+    res.redirect('/login.html')
+})
+
 
 app.listen(PORT, () => console.log('Server started on port ' + PORT))
