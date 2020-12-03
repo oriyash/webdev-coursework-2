@@ -1,0 +1,51 @@
+@import url('ManropeFont.css');
+
+body {
+    font-family: "Manrope", sans-serif;
+    background: linear-gradient(90deg, #8BB6A6, #9bc1c2);
+    font-size: 20px;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 20%;
+}
+
+input[type=email], input[type=password] {
+    font-family: inherit;
+    color: #ffffff;
+    border: none;
+    border-bottom: 5px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0);
+    width: 15%;
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+
+input[type=email]::placeholder, input[type=password]::placeholder {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input[type=submit] {
+    font-family: "Manrope", sans-serif;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    color: #333333;
+    padding: 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+input[type=email]:focus ,input[type=password]:focus, input[type=submit]:focus, input[type=submit]:hover {
+    transform: scale(1.1);
+}
