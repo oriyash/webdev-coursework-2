@@ -28,7 +28,11 @@ header {
     position: absolute;
     left: 0;
     top: 0;
-    height: 80px;
+    height: 100%;
+    width: auto;
+
+   
+    
 }
 
 #buttons {
@@ -84,3 +88,19 @@ footer {
     margin: 0;
     text-align: justify;
 }
+
+#sad {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: auto;
+  padding: 5%;
+    
+    
+}
+@media screen and (max-width: 800px) {
+    #mainTitle {
+        font-size: 25px;
+        text-align: center;
+    }
