@@ -10,6 +10,17 @@ const PORT = 3000
 // set a static folder 
 app.use(express.static(path.join(__dirname, 'public')))
 
+
+
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/index.html'));
+});
+
+app.get('/about', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/about.html'));
+});
+
 // POST req for login
 app.post('/home', (req, res) => {
     res.send('Login Worked')
@@ -19,5 +30,6 @@ app.post('/home', (req, res) => {
 app.post('/register', (req, res) => {
     res.redirect('/login.html')
 })
+
 
 app.listen(PORT, () => console.log('Server started on port ' + PORT))
