@@ -2,50 +2,78 @@
 
 body {
     font-family: "Manrope", sans-serif;
-    background: linear-gradient(90deg, #8BB6A6, #9bc1c2);
+    background-color: #8BB6A6;
+    color: #FFFFFF;
     font-size: 20px;
-    color: #ffffff;
     overflow: hidden;
 }
 
-.container {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top: 20%;
+#wrapper {
+    position: relative;
+    top: 22vh;
+    left: 32vw;
+    display: inline-block;
+    padding: 50px;
+    border-radius: 10px;
+    border: 3px solid white;
 }
 
-input[type=email], input[type=password] {
+#mainTitle {
+    text-align: center;
+}
+
+#loginForm {
+    position: relative;
+}
+
+#email, #password {
     font-family: inherit;
     color: #ffffff;
     border: none;
     border-bottom: 5px solid #ffffff;
     background-color: rgba(255, 255, 255, 0);
-    width: 15%;
+    width: 100%;
     font-size: 20px;
-    transition: transform 0.2s;
 }
 
-input[type=email]::placeholder, input[type=password]::placeholder {
+#email::placeholder, #password::placeholder {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.5);
 }
 
-input[type=submit] {
+#submitBtn {
     font-family: "Manrope", sans-serif;
+    position: relative;
+    top: 15px;
+    left: 40%;
     background-color: #ffffff;
     border: none;
     border-radius: 10px;
     color: #333333;
     padding: 8px;
     text-decoration: none;
-    margin: 4px 2px;
+    margin: 10px 2px;
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
     transition: transform 0.2s;
 }
 
-input[type=email]:focus ,input[type=password]:focus, input[type=submit]:focus, input[type=submit]:hover {
+#submitBtn:focus, #submitBtn:hover {
     transform: scale(1.1);
 }
+
+#registerBtn {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    color: #333333;
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+/* #joke {
+    cursor: pointer;
+} */
