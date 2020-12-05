@@ -21,6 +21,14 @@ app.get('/about', function(req, res) {
     res.sendFile(path.join(__dirname + '/public/about.html'));
 });
 
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname + '/public/login.html'));
+})
+
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, '/public/signup.html'));
+})
+
 // POST req for login
 app.post('/home', (req, res) => {
     res.send('Login Worked')
