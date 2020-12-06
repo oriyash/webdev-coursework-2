@@ -74,6 +74,14 @@ body {
     font-size: 20px;
     font-weight: 600;
 }
-/* #joke {
+
+#joke {
+    margin-top: 15px;
+    max-width: 650px;
+    position: absolute;
+    bottom: 7vh;
+    left: 32.5vw;
+    text-align: center;
+    display: inline-block;
     cursor: pointer;
-} */
+}
