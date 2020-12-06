@@ -5,8 +5,9 @@ const jokeDiv = document.querySelector('#joke')
 jokeText.textContent = dict[Math.floor(Math.random()*dict.length)]
 
     
-function makeJoke() {
+function makeJoke(event) {
     jokeText.textContent = dict[Math.floor(Math.random()*dict.length)]
+    event.stopPropagation()
 }
 
 jokeDiv.addEventListener("click", makeJoke, false)
