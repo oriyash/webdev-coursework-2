@@ -1,56 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sign Up form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/registercss.css">
+    <!-- <script src="js/joke.js" type="module"></script> -->
+    <script src="js/test.js" defer></script>
+    <title>Register</title>
 </head>
 <body>
-   
-    <h1>Sign Up form</h1>
-
-    <form>
-        <label for="username">First Name:</label>
-        <input type="text" id="username" placeholder="eg. John" required> 
-        <br><br>
-        <label for="username">Last Name:</label>
-        <input type="text" id="username" placeholder="eg. Bowie" required> 
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
-        <br><br>
-        <label for="username">Phone Number:</label>
-        <input type="text" id="username" required> 
-        <br><br>
-         <form action="/action_page.php">
-            <label for="birthday">Date of Birth:</label>
-            <input type="date" id="DOB" name="birthday">
-          </form>
-          <br><br>
-          <label for="Gender">Sex:</label>
-          <br>
-          <input type="radio" id="male" name="gender" value="male">
-  <label for="male">Male</label><br>
-  <input type="radio" id="sex" name="gender" value="female">
-  <label for="female">Female</label><br>
-  <input type="radio" id="sex" name="gender" value="other">
-  <label for="other">Other</label>
-        <br><br>
-        <label for="Ethnicity">Ethnicity:</label>
-        <br>
-        <input type="radio" id="male" name="ethnicity" value="male">
-<label for="male">Asian</label><br>
-<input type="radio" id="ethnicity" name="ethnicity" value="ethnicity">
-<label for="ethnicity">European</label><br>
-<input type="radio" id="ethnicity" name="ethnicity" value="ethnicity">
-<label for="ethnicity">African</label><br>
-<input type="radio" id="ethnicity" name="ethnicity" value="ethnicity">
-<label for="ethnicity">American</label><br>
-<input type="radio" id="other" name="ethnicity" value="other">
-<label for="ethnicity">Other: <label for="Other"><input type="Other" name="ethnicity" id="ethnicity"></label></label>
-      <br><br>
-        <input type="submit" value="Next"> 
-
-
-    </form>
-
+    <a href="/" id="homeBtn">Home</a>
+    <div id="wrapper">
+        <h1 id="mainTitle">Join the Norwich Testing Initiative</h1>
+        <form action="#" method="post" id="registerForm">
+            <input type="text" name="firstName" id="firstName" placeholder="What is your First Name?" required> <br><br>
+            <input type="text" name="lastName" id="lastName" placeholder="What is your Last Name?" required> <br><br>
+            <input type="email" name="email" id="email" placeholder="E-Mail. So we can reach you." required> <br><br>
+            <input type="tel" name="telNumber" id="telNumber" placeholder="A Phone Number. To receive any updates." required> <br><br>
+            <input type="password" name="password" id="password" placeholder="Password. Don't let anyone in." required> <br><br>
+            <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Password Again. Just in case." required> <br><br>
+            <input type="submit" id="submitBtn" value="Register!">
+        </form> <br>
+        <span id="register">Already have an account? This <a href="/login" id="loginBtn">way!</a></span>
+    </div>
+    <!-- <div id="joke"> -->
+        <!-- <span id="jokeText"></span> -->
+        <!-- <span id="msg"> (Click for another joke)</span> -->
+    <!-- </div> -->
 </body>
 </html>
