@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/style.css">
     <title>Sign Up form</title>
 </head>
-<body>
-   
-    <h1>Sign Up form</h1>
+<body>     
+    
+    <a href="index.html">Back</a>
 
+    <h1>Sign Up form</h1>
+    
+    <p id="requiredarterisk">All sections with an arterisk (*) are required</p> 
+ 
     <form>
-        <label for="username">First Name:</label>
+        <label for="username">First Name*:</label>
         <input type="text" id="username" placeholder="eg. John" required> 
+        
         <br><br>
-        <label for="username">Last Name:</label>
+        <label for="username">Last Name*:</label>
         <input type="text" id="username" placeholder="eg. Bowie" required> 
+        
         <br><br>
-        <label for="email">Email:</label>
+        <label for="email">Email*:</label>
         <input type="email" id="email" required>
+        
         <br><br>
-        <label for="username">Phone Number:</label>
+        <label for="phonenumber">Phone Number*:</label>
         <input type="text" id="username" required> 
+        
         <br><br>
          <form action="/action_page.php">
-            <label for="birthday">Date of Birth:</label>
-            <input type="date" id="DOB" name="birthday">
+            <label for="birthday">Date of Birth*:</label>
+            <input type="date" id="DOB" name="birthday" required>
           </form>
           <br><br>
-          <label for="Gender">Sex:</label>
+        
+          <label for="Gender">Sex:*</label>
+        
           <br>
           <input type="radio" id="male" name="gender" value="male">
   <label for="male">Male</label><br>
@@ -33,9 +44,12 @@
   <label for="female">Female</label><br>
   <input type="radio" id="sex" name="gender" value="other">
   <label for="other">Other</label>
-        <br><br>
-        <label for="Ethnicity">Ethnicity:</label>
+       
+  <br><br>
+        <label for="Ethnicity">Ethnicity*:</label>
+   
         <br>
+   
         <input type="radio" id="male" name="ethnicity" value="male">
 <label for="male">Asian</label><br>
 <input type="radio" id="ethnicity" name="ethnicity" value="ethnicity">
@@ -46,8 +60,81 @@
 <label for="ethnicity">American</label><br>
 <input type="radio" id="other" name="ethnicity" value="other">
 <label for="ethnicity">Other: <label for="Other"><input type="Other" name="ethnicity" id="ethnicity"></label></label>
-      <br><br>
-        <input type="submit" value="Next"> 
+   
+<br><br>
+
+<hr style="width: 97%;">
+
+<br>
+
+
+
+<form action="/action_page.php">
+    <label for="Mobile number">Mobile number:*</label>
+    <input type="tel" id="phone" name="phone" placeholder="(+44) 123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+  </form>
+
+  
+  <form action="/action_page.php">
+    <label for="House number">House number:*</label>
+    <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+  </form>
+
+  <label class="field">
+    <span class="field__label" for="country">Country:*</span>
+    <select class="field__input" id="country" required>
+      <option value=""></option>
+      <option value="unitedkingdom">United Kingdom</option>
+    </select>
+  </label>
+  
+  <br><br>
+  
+    <label class="field">
+      <span class="field__label" for="address">Address 1:</span>
+      <input class="field__input" type="text" id="address" />
+    </label>
+<br><br>
+    
+    <label class="field">
+        <span class="field__label" for="address">Address 2:</span>
+        <input class="field__input" type="text" id="address"/>
+      </label>
+    
+    <br><br>
+    
+  
+   
+    <div class="fields fields--3">
+      <label class="field">
+        <span class="field__label" for="zipcode">ZIP/Postal:</span>
+        <input class="field__input" type="text" pattern="[0-9]{5}" id="zipcode" />
+      </label>
+<br><br>
+    
+      <hr style="width: 97%;">
+
+      
+
+    
+    <br><br>
+
+     
+      
+    </div>
+    </div>
+
+  
+
+<br>
+<br>
+
+
+
+<form action="/action_page.php" method="get">
+    <button type="submit" formaction="index.html">Next</button>
+</form>
+
 
 
     </form>

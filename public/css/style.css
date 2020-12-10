@@ -84,3 +84,14 @@ footer {
     margin: 0;
     text-align: justify;
 }
+
+#requiredarterisk {
+   color: red;
+   font-size: x-small;
+   font-style: italic;
+}
+
+::placeholder {
+    font-style: italic;
+}
+ 
