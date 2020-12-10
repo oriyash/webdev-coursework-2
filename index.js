@@ -8,17 +8,30 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const PORT = 3000
 
 // set a static folder 
-app.use(express.static(path.join(__dirname, 'public')))
+//app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static('public'))
 
 
 
-
+// route to index.html
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/public/index.html'));
+  res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
 app.get('/about', function(req, res) {
     res.sendFile(path.join(__dirname + '/public/about.html'));
+});
+
+app.get('/info', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/info.html'));
+});
+
+app.get('/login', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/login.html'));
+});
+
+app.get('/signup', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/signup.html'));
 });
 
 // POST req for login
@@ -31,5 +44,16 @@ app.post('/register', (req, res) => {
     res.redirect('/login.html')
 })
 
+
+// Handle 404 
+app.use(function(req, res, next) {
+    res.status(404);
+    res.send('404: File Not Found' );
+    {
+        
+    }
+    
+    
+});
 
 app.listen(PORT, () => console.log('Server started on port ' + PORT))
