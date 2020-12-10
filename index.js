@@ -10,9 +10,6 @@ const PORT = 3000
 // set a static folder 
 app.use(express.static(path.join(__dirname, 'public')))
 
-
-
-
 // GET req for index
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/public/index.html'));
