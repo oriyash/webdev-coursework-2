@@ -13,18 +13,22 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 
+// GET req for index
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
+// GET req for about
 app.get('/about', function(req, res) {
     res.sendFile(path.join(__dirname + '/public/about.html'));
 });
 
+// GET req for login
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/login.html'));
 })
 
+// GET req for register
 app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/signup.html'));
 })
