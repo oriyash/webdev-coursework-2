@@ -10,27 +10,28 @@ const PORT = 3000
 // set a static folder 
 app.use(express.static(path.join(__dirname, 'public')))
 
-// GET req for index
+
+
+
+// route to index.html
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/views/index.html'));
+  res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
-// GET req for about
 app.get('/about', function(req, res) {
-    res.sendFile(path.join(__dirname + '/views/about.html'));
+    res.sendFile(path.join(__dirname + '/public/about.html'));
 });
 
-// GET req for login
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/login.html'));
-})
-
-// GET req for register
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/signup.html'));
-})
 app.get('/info', function(req, res) {
-    res.sendFile(path.join(__dirname + '/views/info.html'));
+    res.sendFile(path.join(__dirname + '/public/info.html'));
+});
+
+app.get('/login', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/login.html'));
+});
+
+app.get('/signup', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/signup.html'));
 });
 
 // POST req for login
@@ -40,9 +41,8 @@ app.post('/home', (req, res) => {
 
 // POST req for sign up 
 app.post('/register', (req, res) => {
-    res.redirect('/login')
+    res.redirect('/login.html')
 })
-
 
 
 // Handle 404 
