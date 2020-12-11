@@ -46,14 +46,21 @@ app.post('/register', (req, res) => {
 
 
 // Handle 404 
-app.use(function(req, res, next) {
-    res.status(404);
+app.use((req, res, next) => {
+    const error = new Error('404: File Not Found')
+    error.status = 404;
     res.send('404: File Not Found' );
-    {
-        
-    }
-    
-    
+    next(error);
+      
+})
+
+app.use((error, req, res, next) => {
+    res.status(error.status || 500);
+    res.json({
+        error: {
+            message: error.message
+        }
+    });   
 });
 
 app.listen(PORT, () => console.log('Server started on port ' + PORT))
