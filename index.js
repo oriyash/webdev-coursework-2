@@ -44,7 +44,7 @@ app.post('/register', (req, res) => {
 })
 
 
-app.listen(PORT, () => {console.log('Server started on port ' + PORT)})
+
 // Handle 404 
 app.use((req, res, next) => {
     const error = new Error('404: File Not Found')
