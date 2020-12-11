@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
+
+    <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    
     <title>Sign Up form</title>
+
+    
 </head>
+
+<div>
+    <form> 
 <body>     
     
     <a href="index.html">Back</a>
 
-    <h1>Sign Up form</h1>
-    
+    <h1 id="mainTitle">Join the Norwich Testing Initiative</h1>
+
+    <h1> <u>Sign Up Form</u></h1> 
+
+    <h2 id="h2">Personal details:</h2>
+
     <p id="requiredarterisk">All sections with an arterisk (*) are required</p> 
  
     <form>
@@ -114,30 +128,45 @@
     
       <hr style="width: 97%;">
 
-      
-
+     </div>
     
-    <br><br>
+     <h2 id="h2">Account details:</h2>
 
-     
+     <br>
+
+     <form action="action_page.php">
+        <div id="usrnameNpsswd">
+          
+          <label for="username">Username:</label>
+          <input type="text"  name="email" required>
+          <br><br>
       
-    </div>
-    </div>
-
-  
+          <label for="psw">Password:</label>
+          <input type="password" name="psw" required>
+          <br><br>
+      
+          <label for="psw-repeat">Repeat Password:</label>
+          <input type="password" name="psw-repeat" required>
+          <br><br>
+      
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+      
+          <p>By creating an account you agree to our <a style="color:blue">Terms & Privacy</a>.</p>
+      
+         
+        </div>
+      </form>
+     
 
 <br>
 <br>
 
-
-
-<form action="/action_page.php" method="get">
-    <button type="submit" formaction="index.html">Next</button>
-</form>
-
-
-
-    </form>
-
-</body>
-</html>
+<form>
+<button type="submit" id="register">Register</button> &nbsp; 
+<span id="account"> Already have an account? <a href="/login.html" id="registerbutton">Click here</a></span>
+    
+<br><br>
+    </form>   
+    </div>
