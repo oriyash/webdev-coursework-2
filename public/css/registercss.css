@@ -9,35 +9,34 @@ body {
 }
 
 #wrapper {
+    border: 3px solid white;
     position: relative;
-    top: 22vh;
+    top: 5vh;
     left: 32vw;
     display: inline-block;
-    padding: 50px;
+    padding: 25px;
     border-radius: 10px;
-    border: 3px solid white;
-    margin-bottom: 5px;
 }
 
 #mainTitle {
     text-align: center;
 }
 
-#loginForm {
+#registerForm {
     position: relative;
 }
 
-#email, #password {
+#firstName, #lastName, #email, #telNumber, #password, #passwordConfirm {
     font-family: inherit;
-    color: #ffffff;
+    color: #FFFFFF;
     border: none;
-    border-bottom: 5px solid #ffffff;
+    border-bottom: 5px solid #FFFFFF;
     background-color: rgba(255, 255, 255, 0);
-    width: 100%;
+    width: 75%;
     font-size: 20px;
 }
 
-#email::placeholder, #password::placeholder {
+#firstName::placeholder, #lastName::placeholder, #email::placeholder, #telNumber::placeholder, #password::placeholder, #passwordConfirm::placeholder {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -64,7 +63,7 @@ body {
     transform: scale(1.1);
 }
 
-#registerBtn {
+#loginBtn {
     background-color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -74,16 +73,6 @@ body {
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
-}
-
-#joke {
-    max-width: 650px;
-    position: absolute;
-    bottom: 5.5vh;
-    left: 32.5vw;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
 }
 
 #homeBtn {
