@@ -1,0 +1,17 @@
+export const dict = [
+    "Just go an A, a C, a D and a C in my A Levels and have been accepted by a university in Yorkshire. Im on a highway to Hull.",
+    "A friend passed his degree in sound engineering. He got a 1-2-1-2.",
+    "A pirate I know just got his exam results. High Cs.",
+    "Friend of mine just finished his A levels. he studied music of the 1970s, Scandinavia, the history of Eurovision and outlandish fashion design. he got ABBA.",
+    "My calculator stopped working mid way through my exam. I can’t count on it any more.",
+    "Did the tree surgeon entrance exam. First question had me stumped.",
+    "Failed my art exam by using the wrong pencil. It just wasn’t 2B.",
+    "A friend has found out he’s said going to be a father. He’s passed his priest entry exams.",
+    "What sort of exams do witches do? Spelling tests.",
+    "What exams do vampire teachers set? Blood tests.",
+    "Disappointed to fail my psychic exam. Didn’t see that coming.",
+    "I always give 100%. Which is why I lost my job as an exam marker.",
+    "Didn’t do well in my football teamwork exam. I didn’t pass.",
+    "Bit nervous about my maths exam. Think my chances of passing it are 40-40.",
+    "Question from my exam, “what is plagiarism?” So I copied my answer from the person beside me.",
+    ]
