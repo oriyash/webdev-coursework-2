@@ -40,7 +40,7 @@ app.post('/home', (req, res) => {
 
 // POST req for sign up 
 app.post('/register', (req, res) => {
-    res.redirect('/login.html')
+    res.redirect('/login')
 })
 
 
