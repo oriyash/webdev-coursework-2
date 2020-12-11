@@ -10,15 +10,27 @@ const PORT = 3000
 // set a static folder 
 app.use(express.static(path.join(__dirname, 'public')))
 
-
-
-
+// GET req for index
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/views/index.html'));
 });
 
+// GET req for about
 app.get('/about', function(req, res) {
-    res.sendFile(path.join(__dirname + '/about.html'));
+    res.sendFile(path.join(__dirname + '/views/about.html'));
+});
+
+// GET req for login
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname + '/views/login.html'));
+})
+
+// GET req for register
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/signup.html'));
+})
+app.get('/info', function(req, res) {
+    res.sendFile(path.join(__dirname + '/views/info.html'));
 });
 
 // POST req for login
@@ -31,5 +43,24 @@ app.post('/register', (req, res) => {
     res.redirect('/login.html')
 })
 
+
+
+// Handle 404 
+app.use((req, res, next) => {
+    const error = new Error('404: File Not Found')
+    error.status = 404;
+    res.send('404: File Not Found' );
+    next(error);
+      
+})
+
+app.use((error, req, res, next) => {
+    res.status(error.status || 500);
+    res.json({
+        error: {
+            message: error.message
+        }
+    });   
+});
 
 app.listen(PORT, () => console.log('Server started on port ' + PORT))
