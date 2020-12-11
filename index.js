@@ -29,6 +29,9 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/signup.html'));
 })
+app.get('/info', function(req, res) {
+    res.sendFile(path.join(__dirname + '/views/info.html'));
+});
 
 // POST req for login
 app.post('/home', (req, res) => {
@@ -42,3 +45,22 @@ app.post('/register', (req, res) => {
 
 
 app.listen(PORT, () => {console.log('Server started on port ' + PORT)})
+// Handle 404 
+app.use((req, res, next) => {
+    const error = new Error('404: File Not Found')
+    error.status = 404;
+    res.send('404: File Not Found' );
+    next(error);
+      
+})
+
+app.use((error, req, res, next) => {
+    res.status(error.status || 500);
+    res.json({
+        error: {
+            message: error.message
+        }
+    });   
+});
+
+app.listen(PORT, () => console.log('Server started on port ' + PORT))
