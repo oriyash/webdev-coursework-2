@@ -12,10 +12,12 @@ body {
     border: 3px solid white;
     position: relative;
     top: 5vh;
-    left: 32vw;
+    left: 17.5vw;
     display: inline-block;
     padding: 25px;
+    padding-top: 5px;
     border-radius: 10px;
+    width: 60vw;
 }
 
 #mainTitle {
@@ -26,19 +28,55 @@ body {
     position: relative;
 }
 
-#firstName, #lastName, #email, #telNumber, #password, #passwordConfirm {
+#firstName, #lastName, #email, #username, #telNumber, #password, #passwordConfirm, #postcode, #landline {
     font-family: inherit;
     color: #FFFFFF;
     border: none;
     border-bottom: 5px solid #FFFFFF;
     background-color: rgba(255, 255, 255, 0);
-    width: 75%;
+    width: 50%;
     font-size: 20px;
+    margin-top: 10px;
+    outline: none;
 }
 
-#firstName::placeholder, #lastName::placeholder, #email::placeholder, #telNumber::placeholder, #password::placeholder, #passwordConfirm::placeholder {
+#firstName::placeholder, #lastName::placeholder, #email::placeholder, #username::placeholder, #telNumber::placeholder, #password::placeholder, #passwordConfirm::placeholder, #postcode::placeholder, #landline::placeholder {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.5);
+}
+
+#gender {
+    position: absolute;
+    top: 0;
+    margin: 15px;
+    margin-left: 100px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0);
+    color: #333333;
+    border: 5px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    min-width: 209px;
+}
+
+#ethnicity {
+    position: absolute;
+    top: 0;
+    margin-left: 100px;
+    margin-top: 70px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0);
+    color: #333333;
+    border: 5px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    min-width: 209px;
 }
 
 #submitBtn {
@@ -56,6 +94,7 @@ body {
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
+    display: block;
     transition: transform 0.2s;
 }
 

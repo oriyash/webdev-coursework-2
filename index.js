@@ -10,6 +10,8 @@ const PORT = 3000
 // set a static folder 
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.use(express.urlencoded({extended: false}))
+
 // GET req for index
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/views/index.html'));
@@ -42,7 +44,10 @@ app.post('/home', (req, res) => {
 
 // POST req for sign up 
 app.post('/register', (req, res) => {
-    res.redirect('/login')
+    let firstName = req.body.firstName.trim().replace(/^\w/, (c) => c.toUpperCase())
+    let lastName = req.body.lastName.trim().replace(/^\w/, (c) => c.toUpperCase())
+    let email = req.body.email.trim().toLowerCase()
+    console.log(firstName + '\t' + lastName + '\t' + email) 
 })
 
 
