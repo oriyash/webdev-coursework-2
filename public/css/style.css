@@ -3,10 +3,18 @@
 body {
     font-family: 'Manrope', sans-serif;
     background-color: #8BB6A6;
+    overflow-x: hidden;
 }
 
+p {
+    padding-top:5px;
+    padding-bottom:5px ;
+    text-indent: 50px
+}
+
+
 #wrapper {
-    margin: 5px 150px;
+    margin: 5px 8vw;
     padding: 10px;
     background-color: #f5f5f5;
     border-radius: 10px;
@@ -82,28 +90,42 @@ nav > ul > li > a {
     padding: 0px 50px;
     text-decoration: none;
     color: black;
+    border-right: 1px solid #000000;
 }
 
-li a:hover {
+nav > ul > li:last-child > a {
+    border-right: 0;
+}
+nav > ul > li > a:hover {
     background-color: #dfdede ;
+  }
+
+  .active {
+      font-weight: Bold;
   }
 
 footer {
     text-align: center;
 }
 
-#description {
+.description {
     margin: 0;
     text-align: justify;
+    
 }
 
 
+.mainText {
+    padding-left:5vw;
+    padding-right:5vw;
 
+}
 
 *{box-sizing:border-box}
 
 .imageCovid {
-padding: 20px
+padding: 30px;
+
 }
 
 /* Slideshow container */
@@ -111,6 +133,7 @@ padding: 20px
   max-width: 45vw;
   position: relative;
   margin: auto;
+
  
   
   
@@ -187,12 +210,37 @@ padding: 20px
   
   /* Left and right column */
   .column.side {
-    width: 25%;
+    width: 20%;
   }
+  .column.side > ul {
+    padding: 0px;
+    
+  }
+  .column.side > ul > li {
+    
+    list-style-type: none;
+  }
+
+  .column.side > ul > li > a
+  {
+    border: 1px solid darkslategray; 
+    background-color: #dfdede;
+    font-size: 18px;
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: darkolivegreen;
+    margin-left: -2px;
+    margin-top: -2px;
+  }
+
   
   /* Middle column */
   .column.main {
-    width: 75%;
+    width: 80%;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
   
   /* Clear floats after the columns */
@@ -203,8 +251,8 @@ padding: 20px
   }
   
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column.side, .column.middle {
+  @media screen and (max-width: 800px) {
+    .column.side, .column.main {
       width: 100%;
     }
       .slideshow-container {
