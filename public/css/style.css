@@ -97,16 +97,119 @@ footer {
     text-align: justify;
 }
 
-#sad {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-  height: auto;
-  padding: 5%;
-    
-    
+
+
+
+*{box-sizing:border-box}
+
+.imageCovid {
+padding: 20px
 }
-@media screen and (max-width: 800px) {
-    
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 45vw;
+  position: relative;
+  margin: auto;
+ 
+  
+  
+}
+
+.slideImage {
+    width: 50%;
+    height: 50%;
+    box-shadow: 3px 3px 5px 6px rgb(109, 107, 107);
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Image : remove the space for descender*/
+.slideImage{
+    width:100%;
+    display: block;
+}
+
+
+/* Caption text */
+.slideText {  
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+
+
+  
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+  }
+  
+  /* Left and right column */
+  .column.side {
+    width: 25%;
+  }
+  
+  /* Middle column */
+  .column.main {
+    width: 75%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+      .slideshow-container {
+        max-width: 80vw;
+
+
+    }
 }
