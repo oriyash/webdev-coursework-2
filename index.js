@@ -47,7 +47,7 @@ app.post('/register', (req, res) => {
 
 /// 404 - error for invalid address
 app.use(function(req, res, next) {
-    return res.status(404).send({ message: 'ERROR 404 : Not found. <a href="https://nodejs.org/en/about/">this</a> ' });
+    return res.status(404).send({ message: 'ERROR 404 : Not found.' });
   });
   
   // 500 - catch all error
