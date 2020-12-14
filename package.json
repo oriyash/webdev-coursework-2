@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/oriyash/webdev-coursework-2#readme",
   "dependencies": {
-    "bcrypt": "^5.0.0",
     "express": "^4.17.1"
   }
 }
