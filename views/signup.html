@@ -42,8 +42,27 @@
                 <option value="nativeAmerican">Native American</option>
                 <option value="mixed">Mixed Race</option>
                 <option value="other">Other</option>
-                <option value="pns">Preder Not to Say</option>
+                <option value="pns">Prefer Not to Say</option>
             </select>
+
+            <fieldset id="fieldOne" class="field">
+                <legend>Test One</legend>
+                <input type="date" name="test1" id="test1" min="2021-01-07" max="2021-01-28" required>
+                <select name="slotOne" id="slotOne"required>
+                    <option value="morning">Morning</option>
+                    <option value="evening">Afternoon</option>
+                </select>
+            </fieldset>
+            
+            <fieldset id="fieldTwo" class="field">
+                <legend>Test Two</legend>
+                <input type="date" name="test2" id="test2" min="2021-01-17" max="2021-02-04" required>
+                <select name="slotTwo" id="slotTwo" required>
+                    <option value="morning">Morning</option>
+                    <option value="evening">Afternoon</option>
+                </select>
+            </fieldset>
+
             <input type="submit" id="submitBtn" value="Register!">
         
         </form> <br>

@@ -5,7 +5,7 @@ body {
     background-color: #8BB6A6;
     color: #FFFFFF;
     font-size: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #wrapper {
@@ -67,6 +67,83 @@ body {
     top: 0;
     margin-left: 100px;
     margin-top: 70px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0);
+    color: #333333;
+    border: 5px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    min-width: 209px;
+}
+
+#test1 {
+    /* position: absolute; */
+    margin-bottom: 5px;
+    font-family: inherit;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+    border: 5px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    min-width: 209px;
+}
+
+#test2 {
+    /* position: absolute; */
+    margin-bottom: 5px;
+    font-family: inherit;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+    border: 5px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    min-width: 209px;
+}
+
+.field {
+    display: inline-block;
+    border: 5px solid #ffffff;
+}
+
+.testLabel {
+    font-size: 20px;
+}
+
+#fieldOne {
+    position: absolute;
+    top: 0;
+    margin-left: 100px;
+    margin-top: 120px;
+}
+
+#fieldTwo {
+    position: absolute;
+    top: 0;
+    margin-left: 100px;
+    margin-top: 275px;
+}
+
+#slotOne {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0);
+    color: #333333;
+    border: 5px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    min-width: 209px;
+}
+
+#slotTwo {
     font-family: inherit;
     font-size: 20px;
     font-weight: 600;
