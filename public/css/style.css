@@ -72,12 +72,16 @@
      color: black;
      border-right: 1px solid #000000;
 }
+
+/*remove right border from last element*/
  nav > ul > li:last-child > a {
      border-right: 0;
 }
+/*chang background for hovered nav element*/
  nav > ul > li > a:hover {
      background-color: #dfdede ;
 }
+/*make page currently in bold*/
  .active {
      font-weight: Bold;
 }
@@ -105,20 +109,17 @@
      margin: auto;
 }
  .slideImage {
-     width: 50%;
+     width: 100%;
      height: 50%;
      box-shadow: 3px 3px 5px 6px rgb(109, 107, 107);
+     display: block;
 }
-/* Hide the images by default */
+/* hide the images by default */
  .mySlides {
      display: none;
 }
-/* Image : remove the space for descender*/
- .slideImage{
-     width:100%;
-     display: block;
-}
-/* Caption text */
+
+/* caption text */
  .slideText {
      color: #f2f2f2;
      font-size: 15px;
@@ -136,12 +137,12 @@
      position: absolute;
      top: 0;
 }
-/* Fading animation */
+/* fading animatin */
  .fade {
      -webkit-animation-name: fade;
-     -webkit-animation-duration: 1.5s;
+     -webkit-animation-duration: 2.0s;
      animation-name: fade;
-     animation-duration: 1.5s;
+     animation-duration: 2.0;
 }
  @-webkit-keyframes fade {
      from {
@@ -159,12 +160,14 @@
         opacity: 1
     }
 }
+
+/*containter for iframe*/
  .iframeContainer {
      position: relative;
      overflow: hidden;
      width: 100%;
      padding-top: 56.25%;
-    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    
 }
  .myiframe {
      position: absolute;
@@ -175,12 +178,12 @@
      width: 100%;
      height: 100%;
 }
-/* Create three unequal columns that floats next to each other */
+
  .column {
      float: left;
      padding: 10px;
 }
-/* Left and right column */
+/* side column*/
  .column.side {
      width: 20%;
 }
@@ -203,13 +206,15 @@
     /*remove overlapping*/
      margin-top: -2px;
 }
-/* Middle column */
+/* main column*/
  .column.main {
      width: 80%;
      padding-left: 5vw;
      padding-right: 5vw;
 }
 
+
+/* Responsive layout - resize maintiel, logo and buttons*/
  @media screen and (max-width: 1200px){
      #mainTitle {
          padding-top: 30px;
@@ -225,7 +230,7 @@
          padding: 15px;
     }
 }
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Responsive layout - stack column, hide banner and main title, move buttons*/
  @media screen and (max-width: 800px) {
      .column.side, .column.main {
          width: 100%;
