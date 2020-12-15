@@ -126,6 +126,9 @@
      display: none;
 }
 
+nav > ul {
+    margin: 0;
+    padding: 0;
 /* caption text */
  .slideText {
      color: #f2f2f2;
@@ -176,7 +179,17 @@
      padding-top: 56.25%;
     
 }
- .myiframe {
+
+nav > ul > li > a {
+    font-size: 25px;
+    display: block;
+    line-height: 35px;
+    padding: 0px 50px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+ 
+.myiframe {
      position: absolute;
      top: 0;
      left: 0;
