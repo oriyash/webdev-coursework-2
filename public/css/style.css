@@ -91,6 +91,9 @@
  .description {
      margin: 0;
      text-align: justify;
+     line-height: 1.5;
+     letter-spacing: 0.8px;
+     margin-top: 10px;
 }
  .mainText {
      padding-left:5vw;
