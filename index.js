@@ -1,7 +1,8 @@
-import express from 'express'
+import express, { response } from 'express'
 import path from 'path'
 import {dirname} from 'path'
 import {fileURLToPath} from 'url'
+import fs from 'fs'
 
 const app = express()
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -10,15 +11,16 @@ const PORT = 3000
 // set a static folder 
 app.use(express.static(path.join(__dirname, 'public')))
 
+// To parse register POST req
 app.use(express.urlencoded({extended: false}))
 
 // GET req for index
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/views/index.html'));
 });
 
 // GET req for about
-app.get('/about', function(req, res) {
+app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname + '/views/about.html'));
 });
 
@@ -44,10 +46,15 @@ app.post('/home', (req, res) => {
 
 // POST req for sign up 
 app.post('/register', (req, res) => {
-    let firstName = req.body.firstName.trim().replace(/^\w/, (c) => c.toUpperCase())
-    let lastName = req.body.lastName.trim().replace(/^\w/, (c) => c.toUpperCase())
-    let email = req.body.email.trim().toLowerCase()
-    console.log(firstName + '\t' + lastName + '\t' + email) 
+    if (req.body.password === req.body.passwordConfirm ) {
+        fs.writeFile('data.json', JSON.stringify(req.body), err => {
+            if (err) return console.log(err)
+            console.log('File Saved!')
+            res.status(200)
+        })
+    } else {
+        return res.status(401).end('Passwords do not match')
+    }
 })
 
 

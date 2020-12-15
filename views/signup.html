@@ -22,10 +22,10 @@
             <input type="password" name="password" id="password" placeholder="Password. Don't let anyone in." required> 
             <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Password Again. Just in case." required>
             <input type="tel" name="telNumber" id="telNumber" placeholder="A Phone Number. To receive any updates." required> 
-            <input type="tel" name="landline" id="landline" placeholder="Landline. To keep you posted.">
+            <input type="tel" name="landline" id="landline" placeholder="Landline. To keep you posted." required>
             <input type="text" name="postcode" id="postcode" placeholder="Postcode" required>
             
-            <select name="gender" id="gender">
+            <select name="gender" id="gender" required>
                 <option value="" disabled selected>Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -33,7 +33,7 @@
                 <option value="pns">Prefer Not to Say</option>
             </select>
             
-            <select name="ethnicity" id="ethnicity">
+            <select name="ethnicity" id="ethnicity" required>
                 <option value="" disabled selected>Ethnicity</option>
                 <option value="asian">Asian</option>
                 <option value="african">Black/African</option>
@@ -56,7 +56,7 @@
             
             <fieldset id="fieldTwo" class="field">
                 <legend>Test Two</legend>
-                <input type="date" name="test2" id="test2" min="2021-01-17" max="2021-02-04" required>
+                <input type="date" name="test2" id="test2" min="2021-01-14" max="2021-02-04" required>
                 <select name="slotTwo" id="slotTwo" required>
                     <option value="morning">Morning</option>
                     <option value="evening">Afternoon</option>
@@ -68,9 +68,5 @@
         </form> <br>
         <span id="register">Already have an account? This <a href="/login" id="loginBtn">way!</a></span>
     </div>
-    <!-- <div id="joke"> -->
-        <!-- <span id="jokeText"></span> -->
-        <!-- <span id="msg"> (Click for another joke)</span> -->
-    <!-- </div> -->
 </body>
 </html>
