@@ -1,76 +1,178 @@
 @import url('ManropeFont.css');
-
-body {
-    font-family: 'Manrope', sans-serif;
-    background-color: #8BB6A6;
+ body {
+     font-family: 'Manrope', sans-serif;
+     background-color: #8BB6A6;
+     overflow-x: hidden;
+}
+ p {
+     padding-top:5px;
+     padding-bottom:5px ;
+     text-indent: 50px 
+}
+ #wrapper {
+     margin: 5px 8vw;
+     padding: 10px;
+     background-color: #f5f5f5;
+     border-radius: 10px;
+}
+ header {
+     color: #333333;
+     position: relative;
+     height: 80px;
+     margin-bottom: 15px;
+}
+ #mainTitle {
+     font-size: 50px;
+     text-align: center;
+}
+ #logo {
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: auto;
+}
+ #buttons {
+     position: absolute;
+     right: 0;
+     top: 0;
+}
+ #buttons > a {
+     font-size: 30px;
+     margin: 10px;
+     padding: 10px;
+     border-radius: 10px;
+     text-decoration: none;
+     background-color: #9bc1c2;
+     color:white;
+}
+ #banner {
+     height: 300px;
+     width: 100%;
+}
+ nav {
+     text-align: center;
+     margin: 10px 0px;
+}
+ nav > ul {
+     margin: 0;
+     padding: 0;
+     border-radius: 5px;
+}
+ nav > ul > li {
+     display: inline-block;
+     list-style-type: none;
+}
+ nav > ul > li > a {
+     font-size: 25px;
+     display: block;
+     line-height: 35px;
+     padding: 0px 50px;
+     text-decoration: none;
+     color: black;
+     border-right: 1px solid #000000;
 }
 
-#wrapper {
-    margin: 5px 150px;
-    padding: 10px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
+/*remove right border from last element*/
+ nav > ul > li:last-child > a {
+     border-right: 0;
 }
-
-header {
-    color: #333333;
-    position: relative;
-    height: 80px;
-    margin-bottom: 15px;
+/*chang background for hovered nav element*/
+ nav > ul > li > a:hover {
+     background-color: #dfdede ;
 }
-
-#mainTitle {
-    font-size: 50px;
-    text-align: center;
-    font-size: 3.5vw;
+/*make page currently in bold*/
+ .active {
+     font-weight: Bold;
 }
-
-#logo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: auto;
-
-   
-    
+ footer {
+     text-align: center;
 }
-
-#buttons {
-    position: absolute;
-    right: 0;
-    top: 0;
+ .description {
+     margin: 0;
+     text-align: justify;
+     line-height: 1.5;
+     letter-spacing: 0.8px;
+     margin-top: 10px;
 }
-
-#buttons > a {
-    font-size: 30px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    background-color: #9bc1c2;
-    color: #333333;
+ .mainText {
+     padding-left:5vw;
+     padding-right:5vw;
 }
-
-#banner {
-    height: 300px;
-    width: 100%;
+ *{
+    box-sizing:border-box
 }
-
-nav {
-    text-align: center;
-    margin: 10px 0px;
-    
+ .imageCovid {
+     padding: 30px;
+}
+/* Slideshow container */
+ .slideshow-container {
+     max-width: 45vw;
+     position: relative;
+     margin: auto;
+}
+ .slideImage {
+     width: 100%;
+     height: 50%;
+     box-shadow: 3px 3px 5px 6px rgb(109, 107, 107);
+     display: block;
+}
+/* hide the images by default */
+ .mySlides {
+     display: none;
 }
 
 nav > ul {
     margin: 0;
     padding: 0;
+/* caption text */
+ .slideText {
+     color: #f2f2f2;
+     font-size: 15px;
+     padding: 8px 12px;
+     position: absolute;
+     bottom: 8px;
+     width: 100%;
+     text-align: center;
+}
+/* Number text (1/3 etc) */
+ .numbertext {
+     color: #f2f2f2;
+     font-size: 12px;
+     padding: 8px 12px;
+     position: absolute;
+     top: 0;
+}
+/* fading animatin */
+ .fade {
+     -webkit-animation-name: fade;
+     -webkit-animation-duration: 2.0s;
+     animation-name: fade;
+     animation-duration: 2.0;
+}
+ @-webkit-keyframes fade {
+     from {
+        opacity: .4
+    }
+     to {
+        opacity: 1
+    }
+}
+ @keyframes fade {
+     from {
+        opacity: .4
+    }
+     to {
+        opacity: 1
+    }
 }
 
-nav > ul > li {
-    display: inline-block;
-    list-style-type: none;
+/*containter for iframe*/
+ .iframeContainer {
+     position: relative;
+     overflow: hidden;
+     width: 100%;
+     padding-top: 56.25%;
     
 }
 
@@ -82,31 +184,110 @@ nav > ul > li > a {
     text-decoration: none;
     color: black;
     border-radius: 5px;
+ 
+.myiframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     width: 100%;
+     height: 100%;
 }
 
-li a:hover {
-    background-color: #dfdede ;
-  }
-
-footer {
-    text-align: center;
+ .column {
+     float: left;
+     padding: 10px;
+}
+/* side column*/
+ .column.side {
+     width: 20%;
+}
+ .column.side > ul {
+     padding: 0px;
+}
+ .column.side > ul > li {
+     list-style-type: none;
+}
+ .column.side > ul > li > a {
+     border: 1px solid darkslategray;
+     background-color: #dfdede;
+     font-size: 18px;
+     display: block;
+     line-height: 50px;
+     text-align: center;
+     text-decoration: none;
+     color: darkolivegreen;
+     margin-left: -2px;
+    /*remove overlapping*/
+     margin-top: -2px;
+}
+/* main column*/
+ .column.main {
+     width: 80%;
+     padding-left: 5vw;
+     padding-right: 5vw;
 }
 
-#description {
-    margin: 0;
-    text-align: justify;
-}
 
-#sad {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
-  height: auto;
-  padding: 5%;
-    
-    
+/* Responsive layout - resize maintiel, logo and buttons*/
+ @media screen and (max-width: 1200px){
+     #mainTitle {
+         padding-top: 30px;
+         font-size: 20px;
+    }
+     #buttons{
+         padding-top: 20px;
+    }
+     #buttons > a {
+         font-size: 20px;
+    }
+     #logo {
+         padding: 15px;
+    }
 }
-@media screen and (max-width: 800px) {
-    
+/* Responsive layout - stack column, hide banner and main title, move buttons*/
+ @media screen and (max-width: 800px) {
+     .column.side, .column.main {
+         width: 100%;
+    }
+     .slideshow-container {
+         max-width: 80vw;
+    }
+     nav > ul > li {
+         padding-bottom: 5px;
+    }
+     nav > ul > li > a {
+         border-right: 0;
+    }
+     #banner {
+         display:none;
+    }
+     #mainTitle {
+         display:none;
+    }
+     #buttons {
+         position: relative;
+         display: flex;
+         justify-content: center;
+         padding-top: 0px;
+    }
+     #buttons > a {
+         font-size: 20px;
+         position: relative;
+         display: inline-block;
+         height: 50px;
+         width: 100px;
+         text-align: center;
+    }
+     #logo {
+         position: relative;
+         padding: 15px;
+         margin: auto;
+         display: block;
+    }
+     nav {
+         padding-top:60px;
+    }
 }
+ 

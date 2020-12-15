@@ -59,22 +59,14 @@ app.post('/register', (req, res) => {
 
 
 
-// Handle 404 
-app.use((req, res, next) => {
-    const error = new Error('404: File Not Found')
-    error.status = 404;
-    res.send('404: File Not Found' );
-    next(error);
-      
-})
-
-app.use((error, req, res, next) => {
-    res.status(error.status || 500);
-    res.json({
-        error: {
-            message: error.message
-        }
-    });   
-});
+/// 404 - error for invalid address
+app.use(function(req, res, next) {
+    return res.status(404).send({ message: 'ERROR 404 : Not found.' });
+  });
+  
+  // 500 - catch all error
+  app.use(function(err, req, res, next) {
+    return res.status(500).send({ error: err });
+  });
 
 app.listen(PORT, () => console.log('Server started on port ' + PORT))
