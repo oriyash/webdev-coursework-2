@@ -1,47 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norwich Testing Initiative</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico"/>
-</head>
-<body>
-    <div id="wrapper">
-        <header>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Norwich Testing Initiative</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico"/>
+      <script src="js/slide.js" type="module"></script>
+   </head>
+   <body>
+      <div id="wrapper">
+         <header>
             <h1 id="mainTitle">Get Tested. Save Lives.</h1>
             <img src="assets/logo.png" id="logo">
-            
             <div id="buttons">
-                <a href="login" id="login">Login</a>
-                <a href="signup" id="signUp">Sign Up</a>
+               <a href="login" id="login">Login</a>
+               <a href="signup" id="signUp">Sign Up</a>
             </div>
-        </header>
-        
-        <img src="assets/banner.jpg" id="banner">
-    
-        <nav>
+         </header>
+         <img src="assets/banner.jpg" id="banner">
+         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="about">About Us</a></li>
-                <li><a href="info">Covid-19 Info</a></li>
+               <li><a href="/">Home</a></li>
+               <li><a href="about">About Us</a></li>
+               <li><a class="active" href="info">Covid-19 Info</a></li>
             </ul>
-        </nav>
-    
-        <main>
-            <p id="description">
-                Information.
-
-
-                
-
-            </p>
-        </main>
-    
-        <footer>
+         </nav>
+         <main>
+            <!-- Jump to section -->
+            <div class="column side">
+               <h3>Jump to</h3>
+               <ul>
+                  <li><a href="#first">Latest Press Briefing</a></li>
+                  <li><a href="#second">Misinformation</a></li>
+                  <li><a href="#third">To be added</a></li>
+               </ul>
+            </div>
+            <div class="column main">
+               <h2>Covid Information</h2>
+               <h3 id="first">Latest Press Briefing</h3>
+               <!-- Video Player -->
+               <div class="iframeContainer">
+                  <iframe class="myiframe" src="https://www.youtube.com/embed/jOlHozGnYVQ"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+               <p class="description">
+                Health Secretary Matt Hancock warns that everyone must "stay on our guard now and through Christmas" as the fight against the virus is not over
+                He urges: "Help is on the horizon, so don't blow it now" - and tells people to respect social distancing rules
+                The fall in the number of cases has flattened off and is rising in some places like Essex, Kent and parts of London
+                The fastest rise in those areas is among secondary school children - those aged 11-18 - with the rate currently "broadly flat" among adults
+                But a sharp rise in cases among younger people can lead to a rise in more vulnerable age groups later, Hancock pointed out
+                As a result, mass testing is to be rolled out for children and their families in the worst-affected areas of Essex, Kent and London
+                Hancock says those case numbers are "worrying" and comes ahead of a review of tiers in England on 16 December
+                A third wave of Covid cases is "not inevitable", said Prof Chris Whitty, but people need to be "very sensible" over Christmas
+                The vaccination rollout is to be expanded, with 10 new locations in England offering the Pfizer/BioNTech jab soon, said Hancock
+                Next year, vaccination centres will open in sports centres and conference halls
+               </p>
+               <p class="description">
+                 - BBC News
+               </p>
+               <h3 id="second">Misinformation</h3>
+               <div class="imageCovid">
+                  <!-- Slideshow container -->
+                  <div class="slideshow-container">
+                     <!-- Full-width images with number and caption text -->
+                     <div class="mySlides fade">
+                        <div class="numbertext">1 / 5</div>
+                        <img class="slideImage" src="assets/fact1.png">
+                        <div class="slideText">Fact 1</div>
+                     </div>
+                     <div class="mySlides fade">
+                        <div class="numbertext">2 / 5</div>
+                        <img class="slideImage" src="assets/fact2.png">
+                        <div class="slideText">Fact 2</div>
+                     </div>
+                     <div class="mySlides fade">
+                        <div class="numbertext">3 / 5</div>
+                        <img class="slideImage" src="assets/fact3.png">
+                        <div class="slideText">Fact 3</div>
+                     </div>
+                     <div class="mySlides fade">
+                        <div class="numbertext">4 / 5</div>
+                        <img class="slideImage" src="assets/fact4.png">
+                        <div class="slideText">Fact 4</div>
+                     </div>
+                     <div class="mySlides fade">
+                        <div class="numbertext">5 / 5</div>
+                        <img class="slideImage" src="assets/fact5.png">
+                        <div class="slideText">Fact 5</div>
+                     </div>
+                  </div>
+               </div>
+               <h3 id="third">To be added</h3>
+               <p class="description">
+                  More information are to be added soon
+               </p>
+            </div>
+         </main>
+         <footer>
             Copyright ©2020 <a href="mailto:contact@groupe5.com">Group E5</a>
-        </footer>
-    </div>
-</body>
+         </footer>
+      </div>
+   </body>
 </html>
